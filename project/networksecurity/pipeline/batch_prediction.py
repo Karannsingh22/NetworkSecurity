@@ -50,7 +50,8 @@ class BatchPredictionPipeline:
             self.network_model = NetworkModel(preprocessor=preprocessor, model=model)
             logging.info("Loaded trained model and preprocessor for inference")
         except Exception as e:
-            raise NetworkSecurityException(e, sys)
+            print("BATCH PIPELINE ERROR:", repr(e))
+            raise
 
     def predict_dataframe(self, df: pd.DataFrame) -> pd.DataFrame:
         """
