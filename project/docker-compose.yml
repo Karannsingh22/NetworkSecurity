@@ -1,0 +1,17 @@
+# Optional convenience file - not required. Equivalent to:
+#   docker build -t network-security .
+#   docker run -p 8501:8501 network-security
+#
+# Usage:
+#   docker compose up --build
+#
+# This is purely local: no cloud provider, credentials, or external
+# services are referenced anywhere in this file.
+services:
+  app:
+    build: .
+    image: network-security
+    container_name: network-security
+    ports:
+      - "8501:8501"
+    restart: unless-stopped
