@@ -1,6 +1,6 @@
 
 """
-Network Security Threat Detection - Streamlit application.
+Phishing URL Detection System - Streamlit application.
 
 Three input modes (sidebar), in order of intended use:
   1. URL Scanner (default) - a normal user types a URL like
@@ -38,7 +38,7 @@ from networksecurity.constant.training_pipeline import (
 )
 
 st.set_page_config(
-    page_title="Network Security Threat Detection",
+    page_title="Phishing URL Detection System",
     page_icon="🛡️",
     layout="wide",
 )
@@ -780,7 +780,7 @@ def developer_diagnostics_mode():
 # ---------------------------------------------------------------------------
 def main():
     st.title(
-        "🛡️ Network Security Threat Detection"
+        "🛡️ Phishing URL Detection System"
     )
 
     st.markdown(
